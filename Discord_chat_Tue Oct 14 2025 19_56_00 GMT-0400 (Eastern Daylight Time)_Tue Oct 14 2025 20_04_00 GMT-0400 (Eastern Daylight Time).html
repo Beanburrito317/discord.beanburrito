@@ -1,0 +1,660 @@
+
+      <!DOCTYPE html>
+      <html lang="en">
+      <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Discord Chat Export</title>
+        <style>
+          body {
+            font-family: 'Whitney', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+            background-color: #36393f;
+            color: #dcddde;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+            display: flex;
+            flex-direction: column;
+            height: 100vh;
+          }
+          .container {
+            max-width: 600px;
+            margin: auto;
+            padding: 20px;
+            border: 1px solid;
+            height: 100%;
+            overflow: auto;
+            flex: 1;
+            border-radius: 6px;
+          }
+          .chatTitle {
+            background-color: #2f3136;
+            border-radius: 8px;
+            padding: 20px;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+          }
+          .chatTitle img {
+            width: 64px;
+            height: 64px;
+            border-radius: 50%;
+            margin-right: 20px;
+          }
+          .titleInfo p {
+            margin: 5px 0;
+          }
+          .titleInfo p:first-child {
+            font-size: 24px;
+            font-weight: bold;
+          }
+          .chatContent {
+            background-color: #36393f;
+            border-radius: 8px;
+            padding: 0;
+            margin: 0;
+          }
+          .chatContent li {
+            list-style: none;
+            padding: 20px;
+            display: flex;
+            align-items: flex-start;
+          }
+          .chatContent li:hover {
+            background-color: #32353b;
+          }
+          .chatContent .titleImg {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            margin-right: 16px;
+          }
+          .messageContent {
+            flex-grow: 1;
+          }
+          .chatName {
+            color: #fff;
+            font-weight: 500;
+            margin-right: 8px;
+          }
+          .time {
+            color: #72767d;
+            font-size: 0.75rem;
+          }
+          .chatContent p {
+            margin: 8px 0;
+          }
+          .attachment {
+            margin-top: 12px;
+            max-width: 100%;
+          }
+          .image-attachment img {
+            max-width: 400px;
+            max-height: 300px;
+            border-radius: 4px;
+          }
+          .video-attachment video,
+          .audio-attachment audio {
+            max-width: 400px;
+          }
+          .file-attachment a {
+            display: inline-block;
+            padding: 8px 12px;
+            background-color: #2f3136;
+            border-radius: 4px;
+            color: #00b0f4;
+            text-decoration: none;
+            font-size: 0.9em;
+          }
+          .file-attachment a:hover {
+            background-color: #393c43;
+          }
+          .sameSender {
+            margin-top: -16px;
+          }
+          .sameSender .titleImg, .sameSender .chatName, .sameSender .time {
+            display: none;
+          }
+        </style>
+      </head>
+      <body>
+        <p style="text-align: center; font-size: 15px;">Export 58 message(s)</p>
+        <div class="container">
+          <div class="chatTitle">
+            <img src="https://static-global.zingfront.com/extension/avator.png" alt="">
+            <div class="titleInfo">
+              <p>...</p>
+              <p>...</p>
+              <p style="font-size: 15px;">从 Tue Oct 14 2025 19:56:00 GMT-0400 (Eastern Daylight Time) 到 Tue Oct 14 2025 20:04:00 GMT-0400 (Eastern Daylight Time)</p>
+            </div>
+          </div>
+          <ul class="chatContent">
+            
+      <li >
+        <img class="titleImg" width="40px" height="40px" src="https://cdn.discordapp.com/avatars/1406323630950055987/5089785705132c73741ab38f27b2b4eb.png?size=128" alt="">
+        <div class="titleInfo">
+          <p class="timeInfo"><span class="chatName">beanburrito317</span><span class="time">Tue Oct 14 2025 19:56:14 GMT-0400 (Eastern Daylight Time)</span></p>
+          <p><span style="color: skyblue;"></span> ?</p>
+          
+        </div>
+      </li>
+    
+      <li >
+        <img class="titleImg" width="40px" height="40px" src="https://cdn.discordapp.com/avatars/1235206969170858086/d84d557dc28d3cb1cc2c5c3575cec657.png?size=128" alt="">
+        <div class="titleInfo">
+          <p class="timeInfo"><span class="chatName">noobsfriend.</span><span class="time">Tue Oct 14 2025 19:56:19 GMT-0400 (Eastern Daylight Time)</span></p>
+          <p><span style="color: skyblue;"></span> So</p>
+          
+        </div>
+      </li>
+    
+      <li >
+        <img class="titleImg" width="40px" height="40px" src="https://cdn.discordapp.com/avatars/1406323630950055987/5089785705132c73741ab38f27b2b4eb.png?size=128" alt="">
+        <div class="titleInfo">
+          <p class="timeInfo"><span class="chatName">beanburrito317</span><span class="time">Tue Oct 14 2025 19:56:23 GMT-0400 (Eastern Daylight Time)</span></p>
+          <p><span style="color: skyblue;"></span> wait no</p>
+          
+        </div>
+      </li>
+    
+      <li class="sameSender">
+        <img class="titleImg" width="40px" height="40px" src="https://cdn.discordapp.com/avatars/1406323630950055987/5089785705132c73741ab38f27b2b4eb.png?size=128" alt="">
+        <div class="titleInfo">
+          <p class="timeInfo"><span class="chatName">beanburrito317</span><span class="time">Tue Oct 14 2025 19:56:26 GMT-0400 (Eastern Daylight Time)</span></p>
+          <p><span style="color: skyblue;"></span> ur roaster</p>
+          
+        </div>
+      </li>
+    
+      <li >
+        <img class="titleImg" width="40px" height="40px" src="https://cdn.discordapp.com/avatars/1235206969170858086/d84d557dc28d3cb1cc2c5c3575cec657.png?size=128" alt="">
+        <div class="titleInfo">
+          <p class="timeInfo"><span class="chatName">noobsfriend.</span><span class="time">Tue Oct 14 2025 19:56:32 GMT-0400 (Eastern Daylight Time)</span></p>
+          <p><span style="color: skyblue;"></span> Yeah I know that</p>
+          
+        </div>
+      </li>
+    
+      <li >
+        <img class="titleImg" width="40px" height="40px" src="https://cdn.discordapp.com/avatars/1406323630950055987/5089785705132c73741ab38f27b2b4eb.png?size=128" alt="">
+        <div class="titleInfo">
+          <p class="timeInfo"><span class="chatName">beanburrito317</span><span class="time">Tue Oct 14 2025 19:56:34 GMT-0400 (Eastern Daylight Time)</span></p>
+          <p><span style="color: skyblue;"></span> my dumbass fell for it</p>
+          
+        </div>
+      </li>
+    
+      <li >
+        <img class="titleImg" width="40px" height="40px" src="https://cdn.discordapp.com/avatars/1235206969170858086/d84d557dc28d3cb1cc2c5c3575cec657.png?size=128" alt="">
+        <div class="titleInfo">
+          <p class="timeInfo"><span class="chatName">noobsfriend.</span><span class="time">Tue Oct 14 2025 19:56:34 GMT-0400 (Eastern Daylight Time)</span></p>
+          <p><span style="color: skyblue;"></span> I’m trying to tell you</p>
+          
+        </div>
+      </li>
+    
+      <li >
+        <img class="titleImg" width="40px" height="40px" src="https://cdn.discordapp.com/avatars/1406323630950055987/5089785705132c73741ab38f27b2b4eb.png?size=128" alt="">
+        <div class="titleInfo">
+          <p class="timeInfo"><span class="chatName">beanburrito317</span><span class="time">Tue Oct 14 2025 19:56:35 GMT-0400 (Eastern Daylight Time)</span></p>
+          <p><span style="color: skyblue;"></span> oh</p>
+          
+        </div>
+      </li>
+    
+      <li >
+        <img class="titleImg" width="40px" height="40px" src="https://cdn.discordapp.com/avatars/1235206969170858086/d84d557dc28d3cb1cc2c5c3575cec657.png?size=128" alt="">
+        <div class="titleInfo">
+          <p class="timeInfo"><span class="chatName">noobsfriend.</span><span class="time">Tue Oct 14 2025 19:56:41 GMT-0400 (Eastern Daylight Time)</span></p>
+          <p><span style="color: skyblue;"></span> Im trying to tell you that</p>
+          
+        </div>
+      </li>
+    
+      <li class="sameSender">
+        <img class="titleImg" width="40px" height="40px" src="https://cdn.discordapp.com/avatars/1235206969170858086/d84d557dc28d3cb1cc2c5c3575cec657.png?size=128" alt="">
+        <div class="titleInfo">
+          <p class="timeInfo"><span class="chatName">noobsfriend.</span><span class="time">Tue Oct 14 2025 19:56:52 GMT-0400 (Eastern Daylight Time)</span></p>
+          <p><span style="color: skyblue;"></span> they aren’t good people to be on the same side with</p>
+          
+        </div>
+      </li>
+    
+      <li class="sameSender">
+        <img class="titleImg" width="40px" height="40px" src="https://cdn.discordapp.com/avatars/1235206969170858086/d84d557dc28d3cb1cc2c5c3575cec657.png?size=128" alt="">
+        <div class="titleInfo">
+          <p class="timeInfo"><span class="chatName">noobsfriend.</span><span class="time">Tue Oct 14 2025 19:57:06 GMT-0400 (Eastern Daylight Time)</span></p>
+          <p><span style="color: skyblue;"></span> Because they</p>
+          
+        </div>
+      </li>
+    
+      <li class="sameSender">
+        <img class="titleImg" width="40px" height="40px" src="https://cdn.discordapp.com/avatars/1235206969170858086/d84d557dc28d3cb1cc2c5c3575cec657.png?size=128" alt="">
+        <div class="titleInfo">
+          <p class="timeInfo"><span class="chatName">noobsfriend.</span><span class="time">Tue Oct 14 2025 19:57:11 GMT-0400 (Eastern Daylight Time)</span></p>
+          <p><span style="color: skyblue;"></span> Are friends with pedophiles</p>
+          
+        </div>
+      </li>
+    
+      <li class="sameSender">
+        <img class="titleImg" width="40px" height="40px" src="https://cdn.discordapp.com/avatars/1235206969170858086/d84d557dc28d3cb1cc2c5c3575cec657.png?size=128" alt="">
+        <div class="titleInfo">
+          <p class="timeInfo"><span class="chatName">noobsfriend.</span><span class="time">Tue Oct 14 2025 19:57:16 GMT-0400 (Eastern Daylight Time)</span></p>
+          <p><span style="color: skyblue;"></span> And people who like cp</p>
+          
+        </div>
+      </li>
+    
+      <li class="sameSender">
+        <img class="titleImg" width="40px" height="40px" src="https://cdn.discordapp.com/avatars/1235206969170858086/d84d557dc28d3cb1cc2c5c3575cec657.png?size=128" alt="">
+        <div class="titleInfo">
+          <p class="timeInfo"><span class="chatName">noobsfriend.</span><span class="time">Tue Oct 14 2025 19:57:31 GMT-0400 (Eastern Daylight Time)</span></p>
+          <p><span style="color: skyblue;"></span> Cuz one time</p>
+          
+        </div>
+      </li>
+    
+      <li class="sameSender">
+        <img class="titleImg" width="40px" height="40px" src="https://cdn.discordapp.com/avatars/1235206969170858086/d84d557dc28d3cb1cc2c5c3575cec657.png?size=128" alt="">
+        <div class="titleInfo">
+          <p class="timeInfo"><span class="chatName">noobsfriend.</span><span class="time">Tue Oct 14 2025 19:57:37 GMT-0400 (Eastern Daylight Time)</span></p>
+          <p><span style="color: skyblue;"></span> CJ’s friend asked me for a cp site</p>
+          
+        </div>
+      </li>
+    
+      <li >
+        <img class="titleImg" width="40px" height="40px" src="https://cdn.discordapp.com/avatars/1406323630950055987/5089785705132c73741ab38f27b2b4eb.png?size=128" alt="">
+        <div class="titleInfo">
+          <p class="timeInfo"><span class="chatName">beanburrito317</span><span class="time">Tue Oct 14 2025 19:57:46 GMT-0400 (Eastern Daylight Time)</span></p>
+          <p><span style="color: skyblue;"></span> i know cj's friend</p>
+          
+        </div>
+      </li>
+    
+      <li >
+        <img class="titleImg" width="40px" height="40px" src="https://cdn.discordapp.com/avatars/1235206969170858086/d84d557dc28d3cb1cc2c5c3575cec657.png?size=128" alt="">
+        <div class="titleInfo">
+          <p class="timeInfo"><span class="chatName">noobsfriend.</span><span class="time">Tue Oct 14 2025 19:57:46 GMT-0400 (Eastern Daylight Time)</span></p>
+          <p><span style="color: skyblue;"></span> And also after I told him that he still said he’s friends with the guy</p>
+          
+        </div>
+      </li>
+    
+      <li >
+        <img class="titleImg" width="40px" height="40px" src="https://cdn.discordapp.com/avatars/1406323630950055987/5089785705132c73741ab38f27b2b4eb.png?size=128" alt="">
+        <div class="titleInfo">
+          <p class="timeInfo"><span class="chatName">beanburrito317</span><span class="time">Tue Oct 14 2025 19:57:47 GMT-0400 (Eastern Daylight Time)</span></p>
+          <p><span style="color: skyblue;"></span> is berd</p>
+          
+        </div>
+      </li>
+    
+      <li >
+        <img class="titleImg" width="40px" height="40px" src="https://cdn.discordapp.com/avatars/1235206969170858086/d84d557dc28d3cb1cc2c5c3575cec657.png?size=128" alt="">
+        <div class="titleInfo">
+          <p class="timeInfo"><span class="chatName">noobsfriend.</span><span class="time">Tue Oct 14 2025 19:57:51 GMT-0400 (Eastern Daylight Time)</span></p>
+          <p><span style="color: skyblue;"></span> yea that one</p>
+          
+        </div>
+      </li>
+    
+      <li >
+        <img class="titleImg" width="40px" height="40px" src="https://cdn.discordapp.com/avatars/1406323630950055987/5089785705132c73741ab38f27b2b4eb.png?size=128" alt="">
+        <div class="titleInfo">
+          <p class="timeInfo"><span class="chatName">beanburrito317</span><span class="time">Tue Oct 14 2025 19:57:59 GMT-0400 (Eastern Daylight Time)</span></p>
+          <p><span style="color: skyblue;"></span> his old username on roblox was shadeoYT</p>
+          
+        </div>
+      </li>
+    
+      <li class="sameSender">
+        <img class="titleImg" width="40px" height="40px" src="https://cdn.discordapp.com/avatars/1406323630950055987/5089785705132c73741ab38f27b2b4eb.png?size=128" alt="">
+        <div class="titleInfo">
+          <p class="timeInfo"><span class="chatName">beanburrito317</span><span class="time">Tue Oct 14 2025 19:58:02 GMT-0400 (Eastern Daylight Time)</span></p>
+          <p><span style="color: skyblue;"></span> but it got banned</p>
+          
+        </div>
+      </li>
+    
+      <li >
+        <img class="titleImg" width="40px" height="40px" src="https://cdn.discordapp.com/avatars/1235206969170858086/d84d557dc28d3cb1cc2c5c3575cec657.png?size=128" alt="">
+        <div class="titleInfo">
+          <p class="timeInfo"><span class="chatName">noobsfriend.</span><span class="time">Tue Oct 14 2025 19:58:04 GMT-0400 (Eastern Daylight Time)</span></p>
+          <p><span style="color: skyblue;"></span> Ye</p>
+          
+        </div>
+      </li>
+    
+      <li >
+        <img class="titleImg" width="40px" height="40px" src="https://cdn.discordapp.com/avatars/1406323630950055987/5089785705132c73741ab38f27b2b4eb.png?size=128" alt="">
+        <div class="titleInfo">
+          <p class="timeInfo"><span class="chatName">beanburrito317</span><span class="time">Tue Oct 14 2025 19:58:12 GMT-0400 (Eastern Daylight Time)</span></p>
+          <p><span style="color: skyblue;"></span> i used to be friends with him in 2020</p>
+          
+        </div>
+      </li>
+    
+      <li >
+        <img class="titleImg" width="40px" height="40px" src="https://cdn.discordapp.com/avatars/1235206969170858086/d84d557dc28d3cb1cc2c5c3575cec657.png?size=128" alt="">
+        <div class="titleInfo">
+          <p class="timeInfo"><span class="chatName">noobsfriend.</span><span class="time">Tue Oct 14 2025 19:58:28 GMT-0400 (Eastern Daylight Time)</span></p>
+          <p><span style="color: skyblue;"></span> ye</p>
+          
+        </div>
+      </li>
+    
+      <li class="sameSender">
+        <img class="titleImg" width="40px" height="40px" src="https://cdn.discordapp.com/avatars/1235206969170858086/d84d557dc28d3cb1cc2c5c3575cec657.png?size=128" alt="">
+        <div class="titleInfo">
+          <p class="timeInfo"><span class="chatName">noobsfriend.</span><span class="time">Tue Oct 14 2025 19:58:38 GMT-0400 (Eastern Daylight Time)</span></p>
+          <p><span style="color: skyblue;"></span> And crosshair and the rest?</p>
+          
+        </div>
+      </li>
+    
+      <li >
+        <img class="titleImg" width="40px" height="40px" src="https://cdn.discordapp.com/avatars/1406323630950055987/5089785705132c73741ab38f27b2b4eb.png?size=128" alt="">
+        <div class="titleInfo">
+          <p class="timeInfo"><span class="chatName">beanburrito317</span><span class="time">Tue Oct 14 2025 19:58:42 GMT-0400 (Eastern Daylight Time)</span></p>
+          <p><span style="color: skyblue;"></span> no</p>
+          
+        </div>
+      </li>
+    
+      <li class="sameSender">
+        <img class="titleImg" width="40px" height="40px" src="https://cdn.discordapp.com/avatars/1406323630950055987/5089785705132c73741ab38f27b2b4eb.png?size=128" alt="">
+        <div class="titleInfo">
+          <p class="timeInfo"><span class="chatName">beanburrito317</span><span class="time">Tue Oct 14 2025 19:58:47 GMT-0400 (Eastern Daylight Time)</span></p>
+          <p><span style="color: skyblue;"></span> just shadeoYT and CJ</p>
+          
+        </div>
+      </li>
+    
+      <li class="sameSender">
+        <img class="titleImg" width="40px" height="40px" src="https://cdn.discordapp.com/avatars/1406323630950055987/5089785705132c73741ab38f27b2b4eb.png?size=128" alt="">
+        <div class="titleInfo">
+          <p class="timeInfo"><span class="chatName">beanburrito317</span><span class="time">Tue Oct 14 2025 19:58:51 GMT-0400 (Eastern Daylight Time)</span></p>
+          <p><span style="color: skyblue;"></span> they were my friends from 2020</p>
+          
+        </div>
+      </li>
+    
+      <li class="sameSender">
+        <img class="titleImg" width="40px" height="40px" src="https://cdn.discordapp.com/avatars/1406323630950055987/5089785705132c73741ab38f27b2b4eb.png?size=128" alt="">
+        <div class="titleInfo">
+          <p class="timeInfo"><span class="chatName">beanburrito317</span><span class="time">Tue Oct 14 2025 19:58:57 GMT-0400 (Eastern Daylight Time)</span></p>
+          <p><span style="color: skyblue;"></span> we were even a trio</p>
+          
+        </div>
+      </li>
+    
+      <li class="sameSender">
+        <img class="titleImg" width="40px" height="40px" src="https://cdn.discordapp.com/avatars/1406323630950055987/5089785705132c73741ab38f27b2b4eb.png?size=128" alt="">
+        <div class="titleInfo">
+          <p class="timeInfo"><span class="chatName">beanburrito317</span><span class="time">Tue Oct 14 2025 19:59:03 GMT-0400 (Eastern Daylight Time)</span></p>
+          <p><span style="color: skyblue;"></span> until shadeo got banned</p>
+          
+        </div>
+      </li>
+    
+      <li >
+        <img class="titleImg" width="40px" height="40px" src="https://cdn.discordapp.com/avatars/1235206969170858086/d84d557dc28d3cb1cc2c5c3575cec657.png?size=128" alt="">
+        <div class="titleInfo">
+          <p class="timeInfo"><span class="chatName">noobsfriend.</span><span class="time">Tue Oct 14 2025 19:59:06 GMT-0400 (Eastern Daylight Time)</span></p>
+          <p><span style="color: skyblue;"></span> Yea</p>
+          
+        </div>
+      </li>
+    
+      <li >
+        <img class="titleImg" width="40px" height="40px" src="https://cdn.discordapp.com/avatars/1406323630950055987/5089785705132c73741ab38f27b2b4eb.png?size=128" alt="">
+        <div class="titleInfo">
+          <p class="timeInfo"><span class="chatName">beanburrito317</span><span class="time">Tue Oct 14 2025 19:59:10 GMT-0400 (Eastern Daylight Time)</span></p>
+          <p><span style="color: skyblue;"></span> and CJ went Paranoid</p>
+          
+        </div>
+      </li>
+    
+      <li class="sameSender">
+        <img class="titleImg" width="40px" height="40px" src="https://cdn.discordapp.com/avatars/1406323630950055987/5089785705132c73741ab38f27b2b4eb.png?size=128" alt="">
+        <div class="titleInfo">
+          <p class="timeInfo"><span class="chatName">beanburrito317</span><span class="time">Tue Oct 14 2025 19:59:19 GMT-0400 (Eastern Daylight Time)</span></p>
+          <p><span style="color: skyblue;"></span> after he found out ShadeoYT has cp</p>
+          
+        </div>
+      </li>
+    
+      <li class="sameSender">
+        <img class="titleImg" width="40px" height="40px" src="https://cdn.discordapp.com/avatars/1406323630950055987/5089785705132c73741ab38f27b2b4eb.png?size=128" alt="">
+        <div class="titleInfo">
+          <p class="timeInfo"><span class="chatName">beanburrito317</span><span class="time">Tue Oct 14 2025 19:59:30 GMT-0400 (Eastern Daylight Time)</span></p>
+          <p><span style="color: skyblue;"></span> so he brought aidden in 2023</p>
+          
+        </div>
+      </li>
+    
+      <li class="sameSender">
+        <img class="titleImg" width="40px" height="40px" src="https://cdn.discordapp.com/avatars/1406323630950055987/5089785705132c73741ab38f27b2b4eb.png?size=128" alt="">
+        <div class="titleInfo">
+          <p class="timeInfo"><span class="chatName">beanburrito317</span><span class="time">Tue Oct 14 2025 19:59:34 GMT-0400 (Eastern Daylight Time)</span></p>
+          <p><span style="color: skyblue;"></span> but aidden</p>
+          
+        </div>
+      </li>
+    
+      <li class="sameSender">
+        <img class="titleImg" width="40px" height="40px" src="https://cdn.discordapp.com/avatars/1406323630950055987/5089785705132c73741ab38f27b2b4eb.png?size=128" alt="">
+        <div class="titleInfo">
+          <p class="timeInfo"><span class="chatName">beanburrito317</span><span class="time">Tue Oct 14 2025 19:59:37 GMT-0400 (Eastern Daylight Time)</span></p>
+          <p><span style="color: skyblue;"></span> he targeted me</p>
+          
+        </div>
+      </li>
+    
+      <li class="sameSender">
+        <img class="titleImg" width="40px" height="40px" src="https://cdn.discordapp.com/avatars/1406323630950055987/5089785705132c73741ab38f27b2b4eb.png?size=128" alt="">
+        <div class="titleInfo">
+          <p class="timeInfo"><span class="chatName">beanburrito317</span><span class="time">Tue Oct 14 2025 19:59:54 GMT-0400 (Eastern Daylight Time)</span></p>
+          <p><span style="color: skyblue;"></span> and made me cut ties with CJ in april 2024</p>
+          
+        </div>
+      </li>
+    
+      <li class="sameSender">
+        <img class="titleImg" width="40px" height="40px" src="https://cdn.discordapp.com/avatars/1406323630950055987/5089785705132c73741ab38f27b2b4eb.png?size=128" alt="">
+        <div class="titleInfo">
+          <p class="timeInfo"><span class="chatName">beanburrito317</span><span class="time">Tue Oct 14 2025 20:00:06 GMT-0400 (Eastern Daylight Time)</span></p>
+          <p><span style="color: skyblue;"></span> but cj went even more paranoid and made a whole hate group on me</p>
+          
+        </div>
+      </li>
+    
+      <li class="sameSender">
+        <img class="titleImg" width="40px" height="40px" src="https://cdn.discordapp.com/avatars/1406323630950055987/5089785705132c73741ab38f27b2b4eb.png?size=128" alt="">
+        <div class="titleInfo">
+          <p class="timeInfo"><span class="chatName">beanburrito317</span><span class="time">Tue Oct 14 2025 20:00:12 GMT-0400 (Eastern Daylight Time)</span></p>
+          <p><span style="color: skyblue;"></span> i couldnt sleep for months after that</p>
+          
+        </div>
+      </li>
+    
+      <li class="sameSender">
+        <img class="titleImg" width="40px" height="40px" src="https://cdn.discordapp.com/avatars/1406323630950055987/5089785705132c73741ab38f27b2b4eb.png?size=128" alt="">
+        <div class="titleInfo">
+          <p class="timeInfo"><span class="chatName">beanburrito317</span><span class="time">Tue Oct 14 2025 20:00:25 GMT-0400 (Eastern Daylight Time)</span></p>
+          <p><span style="color: skyblue;"></span> aidden introduced me to a group shortly after that</p>
+          
+        </div>
+      </li>
+    
+      <li class="sameSender">
+        <img class="titleImg" width="40px" height="40px" src="https://cdn.discordapp.com/avatars/1406323630950055987/5089785705132c73741ab38f27b2b4eb.png?size=128" alt="">
+        <div class="titleInfo">
+          <p class="timeInfo"><span class="chatName">beanburrito317</span><span class="time">Tue Oct 14 2025 20:00:33 GMT-0400 (Eastern Daylight Time)</span></p>
+          <p><span style="color: skyblue;"></span> and they forced me to do things to cj</p>
+          
+        </div>
+      </li>
+    
+      <li class="sameSender">
+        <img class="titleImg" width="40px" height="40px" src="https://cdn.discordapp.com/avatars/1406323630950055987/5089785705132c73741ab38f27b2b4eb.png?size=128" alt="">
+        <div class="titleInfo">
+          <p class="timeInfo"><span class="chatName">beanburrito317</span><span class="time">Tue Oct 14 2025 20:00:37 GMT-0400 (Eastern Daylight Time)</span></p>
+          <p><span style="color: skyblue;"></span> or they would dox me</p>
+          
+        </div>
+      </li>
+    
+      <li class="sameSender">
+        <img class="titleImg" width="40px" height="40px" src="https://cdn.discordapp.com/avatars/1406323630950055987/5089785705132c73741ab38f27b2b4eb.png?size=128" alt="">
+        <div class="titleInfo">
+          <p class="timeInfo"><span class="chatName">beanburrito317</span><span class="time">Tue Oct 14 2025 20:00:44 GMT-0400 (Eastern Daylight Time)</span></p>
+          <p><span style="color: skyblue;"></span> and send fake nudes of me to my parents</p>
+          
+        </div>
+      </li>
+    
+      <li class="sameSender">
+        <img class="titleImg" width="40px" height="40px" src="https://cdn.discordapp.com/avatars/1406323630950055987/5089785705132c73741ab38f27b2b4eb.png?size=128" alt="">
+        <div class="titleInfo">
+          <p class="timeInfo"><span class="chatName">beanburrito317</span><span class="time">Tue Oct 14 2025 20:01:06 GMT-0400 (Eastern Daylight Time)</span></p>
+          <p><span style="color: skyblue;"></span> thankfully cj rescued me somehow after finding out aidden was doing all this</p>
+          
+        </div>
+      </li>
+    
+      <li class="sameSender">
+        <img class="titleImg" width="40px" height="40px" src="https://cdn.discordapp.com/avatars/1406323630950055987/5089785705132c73741ab38f27b2b4eb.png?size=128" alt="">
+        <div class="titleInfo">
+          <p class="timeInfo"><span class="chatName">beanburrito317</span><span class="time">Tue Oct 14 2025 20:01:11 GMT-0400 (Eastern Daylight Time)</span></p>
+          <p><span style="color: skyblue;"></span> but at the time</p>
+          
+        </div>
+      </li>
+    
+      <li class="sameSender">
+        <img class="titleImg" width="40px" height="40px" src="https://cdn.discordapp.com/avatars/1406323630950055987/5089785705132c73741ab38f27b2b4eb.png?size=128" alt="">
+        <div class="titleInfo">
+          <p class="timeInfo"><span class="chatName">beanburrito317</span><span class="time">Tue Oct 14 2025 20:01:17 GMT-0400 (Eastern Daylight Time)</span></p>
+          <p><span style="color: skyblue;"></span> i completely forgot who aidden even was</p>
+          
+        </div>
+      </li>
+    
+      <li >
+        <img class="titleImg" width="40px" height="40px" src="https://cdn.discordapp.com/avatars/1235206969170858086/d84d557dc28d3cb1cc2c5c3575cec657.png?size=128" alt="">
+        <div class="titleInfo">
+          <p class="timeInfo"><span class="chatName">noobsfriend.</span><span class="time">Tue Oct 14 2025 20:01:22 GMT-0400 (Eastern Daylight Time)</span></p>
+          <p><span style="color: skyblue;"></span> Oh</p>
+          
+        </div>
+      </li>
+    
+      <li >
+        <img class="titleImg" width="40px" height="40px" src="https://cdn.discordapp.com/avatars/1406323630950055987/5089785705132c73741ab38f27b2b4eb.png?size=128" alt="">
+        <div class="titleInfo">
+          <p class="timeInfo"><span class="chatName">beanburrito317</span><span class="time">Tue Oct 14 2025 20:01:22 GMT-0400 (Eastern Daylight Time)</span></p>
+          <p><span style="color: skyblue;"></span> i only knew two people</p>
+          
+        </div>
+      </li>
+    
+      <li class="sameSender">
+        <img class="titleImg" width="40px" height="40px" src="https://cdn.discordapp.com/avatars/1406323630950055987/5089785705132c73741ab38f27b2b4eb.png?size=128" alt="">
+        <div class="titleInfo">
+          <p class="timeInfo"><span class="chatName">beanburrito317</span><span class="time">Tue Oct 14 2025 20:01:27 GMT-0400 (Eastern Daylight Time)</span></p>
+          <p><span style="color: skyblue;"></span> Merah Moy and Mr Mate</p>
+          
+        </div>
+      </li>
+    
+      <li class="sameSender">
+        <img class="titleImg" width="40px" height="40px" src="https://cdn.discordapp.com/avatars/1406323630950055987/5089785705132c73741ab38f27b2b4eb.png?size=128" alt="">
+        <div class="titleInfo">
+          <p class="timeInfo"><span class="chatName">beanburrito317</span><span class="time">Tue Oct 14 2025 20:01:39 GMT-0400 (Eastern Daylight Time)</span></p>
+          <p><span style="color: skyblue;"></span> and a girl named QT was also being forced</p>
+          
+        </div>
+      </li>
+    
+      <li class="sameSender">
+        <img class="titleImg" width="40px" height="40px" src="https://cdn.discordapp.com/avatars/1406323630950055987/5089785705132c73741ab38f27b2b4eb.png?size=128" alt="">
+        <div class="titleInfo">
+          <p class="timeInfo"><span class="chatName">beanburrito317</span><span class="time">Tue Oct 14 2025 20:02:03 GMT-0400 (Eastern Daylight Time)</span></p>
+          <p><span style="color: skyblue;"></span> then the shadeoYT joined aidden and they both spammed gore on my dms</p>
+          
+        </div>
+      </li>
+    
+      <li class="sameSender">
+        <img class="titleImg" width="40px" height="40px" src="https://cdn.discordapp.com/avatars/1406323630950055987/5089785705132c73741ab38f27b2b4eb.png?size=128" alt="">
+        <div class="titleInfo">
+          <p class="timeInfo"><span class="chatName">beanburrito317</span><span class="time">Tue Oct 14 2025 20:02:09 GMT-0400 (Eastern Daylight Time)</span></p>
+          <p><span style="color: skyblue;"></span> so i made a new account</p>
+          
+        </div>
+      </li>
+    
+      <li class="sameSender">
+        <img class="titleImg" width="40px" height="40px" src="https://cdn.discordapp.com/avatars/1406323630950055987/5089785705132c73741ab38f27b2b4eb.png?size=128" alt="">
+        <div class="titleInfo">
+          <p class="timeInfo"><span class="chatName">beanburrito317</span><span class="time">Tue Oct 14 2025 20:02:13 GMT-0400 (Eastern Daylight Time)</span></p>
+          <p><span style="color: skyblue;"></span> remember my old account</p>
+          
+        </div>
+      </li>
+    
+      <li class="sameSender">
+        <img class="titleImg" width="40px" height="40px" src="https://cdn.discordapp.com/avatars/1406323630950055987/5089785705132c73741ab38f27b2b4eb.png?size=128" alt="">
+        <div class="titleInfo">
+          <p class="timeInfo"><span class="chatName">beanburrito317</span><span class="time">Tue Oct 14 2025 20:02:18 GMT-0400 (Eastern Daylight Time)</span></p>
+          <p><span style="color: skyblue;"></span> when i said nigger head?</p>
+          
+        </div>
+      </li>
+    
+      <li class="sameSender">
+        <img class="titleImg" width="40px" height="40px" src="https://cdn.discordapp.com/avatars/1406323630950055987/5089785705132c73741ab38f27b2b4eb.png?size=128" alt="">
+        <div class="titleInfo">
+          <p class="timeInfo"><span class="chatName">beanburrito317</span><span class="time">Tue Oct 14 2025 20:02:27 GMT-0400 (Eastern Daylight Time)</span></p>
+          <p><span style="color: skyblue;"></span> i was being forced to do t hat</p>
+          
+        </div>
+      </li>
+    
+      <li class="sameSender">
+        <img class="titleImg" width="40px" height="40px" src="https://cdn.discordapp.com/avatars/1406323630950055987/5089785705132c73741ab38f27b2b4eb.png?size=128" alt="">
+        <div class="titleInfo">
+          <p class="timeInfo"><span class="chatName">beanburrito317</span><span class="time">Tue Oct 14 2025 20:02:36 GMT-0400 (Eastern Daylight Time)</span></p>
+          <p><span style="color: skyblue;"></span> i didnt have a choice</p>
+          
+        </div>
+      </li>
+    
+      <li class="sameSender">
+        <img class="titleImg" width="40px" height="40px" src="https://cdn.discordapp.com/avatars/1406323630950055987/5089785705132c73741ab38f27b2b4eb.png?size=128" alt="">
+        <div class="titleInfo">
+          <p class="timeInfo"><span class="chatName">beanburrito317</span><span class="time">Tue Oct 14 2025 20:02:44 GMT-0400 (Eastern Daylight Time)</span></p>
+          <p><span style="color: skyblue;"></span> they would send shit to my parents</p>
+          
+        </div>
+      </li>
+    
+      <li >
+        <img class="titleImg" width="40px" height="40px" src="https://cdn.discordapp.com/avatars/1235206969170858086/d84d557dc28d3cb1cc2c5c3575cec657.png?size=128" alt="">
+        <div class="titleInfo">
+          <p class="timeInfo"><span class="chatName">noobsfriend.</span><span class="time">Tue Oct 14 2025 20:04:00 GMT-0400 (Eastern Daylight Time)</span></p>
+          <p><span style="color: skyblue;"></span> That’s not good</p>
+          
+        </div>
+      </li>
+    
+          </ul>
+        </div>
+
+      </body>
+      </html>
+    
